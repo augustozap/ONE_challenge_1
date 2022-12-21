@@ -1,0 +1,455 @@
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+ .header {
+    padding: 15px;
+  }
+
+  /* @media only screen and (min-width: 600px) { */
+  @media only screen and (min-width: 991px) { 
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+
+  /* @media only screen and (min-width: 768px) { */
+  @media only screen and (min-width: 992px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: #FFF;}
+  .box_input{
+    width: 333px;
+    height: 48px;
+  }
+  .input{
+    position: relative;
+    top: 25%;
+    left: 26%;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+  }
+  .box_side{
+    width: 100%;
+    height: auto;
+    background-color: #FFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+  }
+  .boy{
+    display:none;
+  }
+  .box_status{
+    position: absolute;
+    top: 75%;
+    padding: 0 10%;
+  }
+  .status_title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+  }
+  .status_message{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+  }
+  .box_button{
+    position: absolute;
+    top: 35%;
+    text-align: center;
+  }
+  .box_button p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+  }
+  .cryptor{
+    width: 332px;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFF;
+    margin: 15px;
+  }
+  .decryptor{
+    width: 332px;
+    height: 67px;
+    background: #FFF;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+  }
+}
+
+/*Small devices (portrait tablets and large phones, 600px and up)*/
+@media only screen and (min-width: 600px) {
+  .example {background: lightgreen;}
+  .box_input{
+    width: 333px;
+    height: 48px;
+  }
+  .input{
+    position: relative;
+    top: 25%;
+    left: 26%;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+  }
+  .box_side{
+    width: 100%;
+    height: auto;
+    background-color: #FFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+  }
+  .boy{
+    display:none;
+  }
+  .box_status{
+    position: absolute;
+    top: 75%;
+    padding: 0 10%;
+  }
+  .status_title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+  }
+  .status_message{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+  }
+  .box_button{
+    position: absolute;
+    top: 35%;
+    text-align: center;
+  }
+  .box_button p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+  }
+  .cryptor{
+    width: 332px;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFF;
+    margin: 15px;
+  }
+  .decryptor{
+    width: 332px;
+    height: 67px;
+    background: #FFF;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+  }
+}
+
+/*Medium devices (landscape tablets, 768px and up)*/
+/* @media only screen and (min-width: 768px) {
+  .example {background: blue;}
+  .boy{
+    display:none;
+  }
+}  */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+  .box_input{
+    width: 100%;
+    height: 800px;
+    background-color: #FFF;
+  }
+  .input{
+    position: relative;
+    top: 25%;
+    left: 15%;
+
+    width: 50%;
+    height: 48px;
+    border: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+  }
+  .box_side{
+    width: 100%;
+    height: 800px;
+    background-color: #FFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+  }
+  .boy{
+    display:inline-block;
+    position:relative;
+    width: 80%;
+    margin-top: 50%;
+    left: 5%;
+  }
+  .box_status{
+    position:static;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 0 10%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+  .status_title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+  }
+  .status_message{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+  }
+  .box_button{
+    position: relative;
+    top: 75%;
+    text-align: center;
+    gap: 15px;
+  }
+  .box_button p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .cryptor{
+    width: 332px;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .decryptor{
+    width: 332px;
+    height: 67px;
+    background: #FFF;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+  .box_input{
+    width: 100%;
+    height: 800px;
+    background-color: #FFF;
+  }
+  .input{
+    position: relative;
+    top: 25%;
+    left: 15%;
+
+    width: 50%;
+    height: 48px;
+    border: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+  }
+  .box_side{
+    width: 100%;
+    height: 800px;
+    background-color: #FFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+  }
+  .boy{
+    display:inline-block;
+    position:relative;
+    width: 80%;
+    margin-top: 50%;
+    left: 5%;
+  }
+  .box_status{
+    position:static;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 0 10%;
+  }
+  .status_title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+  }
+  .status_message{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+  }
+  .box_button{
+    position: relative;
+    top: 75%;
+    text-align: center;
+    gap: 15px;
+  }
+  .box_button p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+  }
+  .cryptor{
+    width: 332px;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .decryptor{
+    width: 332px;
+    height: 67px;
+    background: #FFF;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+  }
+}
+
+
+
+
