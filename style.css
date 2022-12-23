@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    background-color: #F3F5FC;
 }
 
 .row::after {
@@ -59,8 +60,7 @@
   .example {background: pink;}
   .box_input{
     width: auto;
-    height: 581px;
-    background-color: lightgrey;
+    height: 490px;
   }
   .input{
     position: relative;
@@ -83,6 +83,7 @@
   .box_status{
     position: relative;
     margin: 0% 0 0 0;
+    background-color: #F3F5FC;
     
   }
   .status_title{
@@ -127,7 +128,6 @@
     width: 90%;
     top: 35%;
     text-align: center;
-    background-color: #FFF;
   }
   .box_button p{
     font-family: 'Inter';
@@ -174,7 +174,6 @@
   .box_input{
     width: auto;
     height: 750px;
-    background-color: lightgrey;
   }
   .input{
     position: relative;
@@ -200,9 +199,9 @@
   .box_status{
     position: absolute;
     width: 93%;
-    top: 60%;
+    top: 73%;
     padding: 0 10%;
-    background-color: #FFF;
+    background-color: #F3F5FC;
   }
   .status_title{
     font-family: 'Inter';
@@ -286,11 +285,10 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 992px) {
-  .example {background: pink;}
+  /*.example {background: pink;}*/
   .box_input{
     width: auto;
     height: 800px;
-    background-color: #FFF;
   }
   .input{
     position: relative;
@@ -313,8 +311,10 @@
     height: 800px;
     background-color: #FFF;
     border-radius: 32px;
+    box-shadow: 0px -5px 32px -8px rgb(0 0 0 / 80%);
   }
   .boy{
+    background-color: #FFF;
     display:inline-block;
     position:relative;
     width: 80%;
@@ -328,6 +328,7 @@
     gap: 16px;
     text-align: center;
     padding: 0 10%;
+    background-color: #FFF;
   }
   .status_title{
     font-family: 'Inter';
@@ -337,6 +338,7 @@
     line-height: 120%;
     text-align: center;
     color: #343A40;
+    background-color: #FFF;
   }
   .status_message{
     font-family: 'Inter';
@@ -346,6 +348,7 @@
     line-height: 150%;
     text-align: center;
     color: #495057;
+    background-color: #FFF;
   }
   .box_copy{
     position: relative;

@@ -46,7 +46,7 @@ function encriptar(){
     }
     verifica_estilos();
 
-    document.querySelector(".status_title").innerHTML=`Tu texto encriptado: ${cadena}`;
+    document.querySelector(".status_title").innerHTML=`Tu texto encriptado: <br>${cadena}`;
     document.querySelector(".status_message").innerHTML="";
     document.querySelector(".cryptor").style.visibility="hidden";
     document.querySelector(".decryptor").style.visibility="hidden";
@@ -66,7 +66,7 @@ function desencriptar(){
     cadena = cadena.replace(/ufat/g, "u");
     console.log(cadena);
 
-    document.querySelector(".status_title").innerHTML=`Tu texto desencriptado: ${cadena}`;
+    document.querySelector(".status_title").innerHTML=`Tu texto desencriptado: <br>${cadena}`;
     document.querySelector(".status_message").innerHTML="";
     document.querySelector(".cryptor").style.visibility="hidden";
     document.querySelector(".decryptor").style.visibility="hidden";
@@ -75,29 +75,28 @@ function desencriptar(){
 
 function verifica_estilos(){
     let desk = window.matchMedia('(min-width: 992px)');
-    let tabl = window.matchMedia('(max-width: 601px)');
+    let tabl = window.matchMedia('(min-width: 601px)');
     let cell = window.matchMedia('(max-width: 600px)');
 
     document.querySelector(".copy_button").style.visibility="visible";
     document.querySelector(".copy_button").onclick=copiarPortapapeles;
 
     if (desk.matches) {
-        document.querySelector(".status_title").style.fontSize="15px";
+        document.querySelector(".status_title").style.fontSize="18px";
         document.querySelector(".status_title").style.textAling="center";
         console.log("pantalla de escritorio");
-    }
-    
-    if (desk.matches &&
-        tabl.matches) {
-        document.querySelector(".status_title").style.fontSize="25px";
-        document.querySelector(".status_title").style.textAling="center";
-        console.log("pantalla de tableta");
-    }
-    
-    if (cell.matches) {
-        document.querySelector(".status_title").style.fontSize="15px";
-        document.querySelector(".status_title").style.textAling="center";
-        console.log("pantalla de celular");
+    }else{
+        if (tabl.matches) {
+            document.querySelector(".status_title").style.fontSize="15px";
+            document.querySelector(".status_title").style.textAling="center";
+            console.log("pantalla de tableta");
+        }else{
+            if (cell.matches) {
+                document.querySelector(".status_title").style.fontSize="12px";
+                document.querySelector(".status_title").style.textAling="center";
+                console.log("pantalla de celular");
+            }
+        }
     }
 }
 function copiarPortapapeles() {
