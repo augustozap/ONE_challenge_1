@@ -68,9 +68,7 @@
     left: 17%;
     border: none;
     font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
+    font-size: 17px;
     line-height: 150%;
   }
   .box_side{
@@ -126,6 +124,7 @@
 
   .box_button{
     position: absolute;
+    width: 90%;
     top: 35%;
     text-align: center;
     background-color: #FFF;
@@ -138,7 +137,7 @@
     text-align: center;
   }
   .cryptor{
-    width: 332px;
+    width: 70%;
     height: 67px;
     background: #0A3871;
     border-radius: 24px;
@@ -150,7 +149,7 @@
     margin: 15px;
   }
   .decryptor{
-    width: 332px;
+    width: 70%;
     height: 67px;
     background: #FFF;
     border-radius: 24px;
@@ -159,6 +158,13 @@
     line-height: 19px;
     text-align: center;
     color: #0A3871;
+  }
+  .box_footer{
+    display:block;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 10px;
+    font-weight: bolder;
   }
 }
 
@@ -184,17 +190,19 @@
   .box_side{
     width: auto;
     height:fit-content;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.8);
     border-radius: 32px;
     margin: -20% 0 0 0;
+    background-color: yellowgreen;
   }
   .boy{
     display:none;
   }
   .box_status{
     position: absolute;
+    width: 93%;
     top: 60%;
     padding: 0 10%;
+    background-color: #FFF;
   }
   .status_title{
     font-family: 'Inter';
@@ -230,6 +238,7 @@
     line-height: 19px;
     text-align: center;
     color: #FFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.8);
   }
   .box_button{
     position: absolute;
@@ -265,6 +274,13 @@
     line-height: 19px;
     text-align: center;
     color: #0A3871;
+  }
+  .box_footer{
+    display:block;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 12px;
+    font-weight: bolder;
   }
 }
 
@@ -391,9 +407,11 @@
     display:block;
     text-align: center;
     font-family: 'Inter';
-    font-size: 10px;
+    font-size: 15px;
+    font-weight: bolder;
   }
 }
+
 
 
 

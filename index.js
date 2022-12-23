@@ -1,34 +1,118 @@
 window.onload=inicio;
 function inicio(){
-
-    // document.querySelector(".caja_lateral").insertAdjacentHTML("beforeend",`<img class="boy" src="images/boy.png" alt="boy.png">`);
-    // document.querySelector(".boy").style.position="absolute";
-    // document.querySelector(".boy").style.width="336px";
-    // document.querySelector(".boy").style.height="304px";
-    // document.querySelector(".boy").style.top="283px";
-    // document.querySelector(".boy").style.left="35px";
-
-
+    document.querySelector(".copy_button").style.visibility="hidden";
+    document.querySelector(".cryptor").onclick=encriptar;
+    document.querySelector(".decryptor").onclick=desencriptar;
     
-
-    //inserta elemento caja-status
-    // document.querySelector(".caja_lateral").insertAdjacentHTML("beforeend",`
-    // <div class="caja_status">
-    // <p class="status_title">Ningún Mensaje fué encontrado</p>
-    // <p class="status_message">Ingresa el texto que desees encriptar o desencriptar.</p>
-    // </div>`);
-    // document.querySelector(".caja_status").style.display="flex";
-    // document.querySelector(".caja_status").style.flexDirection="column";
-    // document.querySelector(".caja_status").style.alignItems="flexStart";
-    // document.querySelector(".caja_status").style.padding="0px";
-    // document.querySelector(".caja_status").style.gap="16px";
-    // document.querySelector(".caja_status").style.position="absolute";
-    // document.querySelector(".caja_status").style.width="336px";
-    // document.querySelector(".caja_status").style.height="122px"
-    // document.querySelector(".caja_status").style.left="35px";
-    // document.querySelector(".caja_status").style.top="619px";
+}
+var cadena="";
 
 
+function encriptar(){
+    let caracter;
+    let texto = document.querySelector(".input").value;
+    let largo = texto.length;
+    
+    for (i=0; i < largo; i++){
+
+        caracter = texto.substr(i,1);
+        switch (caracter) {
+            case "a":
+                console.log("letra a");
+                cadena = cadena + "ai";
+                break;
+            case "e":
+                console.log("letra e");
+                cadena = cadena + "enter";
+                break;
+            case "i":
+                console.log("letra i");
+                cadena = cadena + "imes";
+                break;
+            case "o":
+                console.log("letra o");
+                cadena = cadena + "ober";
+                break;    
+            case "u":
+                console.log("letra u");
+                cadena = cadena + "ufat";
+                break;    
+            default:
+                console.log("cualquier otra letra");
+                cadena = cadena + caracter;
+                break;
+          }
+
+    }
+    verifica_estilos();
+
+    document.querySelector(".status_title").innerHTML=`Tu texto encriptado: ${cadena}`;
+    document.querySelector(".status_message").innerHTML="";
+    document.querySelector(".cryptor").style.visibility="hidden";
+    document.querySelector(".decryptor").style.visibility="hidden";
+}
+function desencriptar(){
+    cadena = "";
+    let texto = document.querySelector(".input").value;
+
+    cadena = texto.replace(/ai/g, "a");
+    console.log(cadena);
+    cadena = cadena.replace(/enter/g, "e");
+    console.log(cadena);
+    cadena = cadena.replace(/imes/g, "i");
+    console.log(cadena);
+    cadena = cadena.replace(/ober/g, "o");
+    console.log(cadena);
+    cadena = cadena.replace(/ufat/g, "u");
+    console.log(cadena);
+
+    document.querySelector(".status_title").innerHTML=`Tu texto desencriptado: ${cadena}`;
+    document.querySelector(".status_message").innerHTML="";
+    document.querySelector(".cryptor").style.visibility="hidden";
+    document.querySelector(".decryptor").style.visibility="hidden";
+    verifica_estilos();
+}
+
+function verifica_estilos(){
+    let desk = window.matchMedia('(min-width: 992px)');
+    let tabl = window.matchMedia('(max-width: 601px)');
+    let cell = window.matchMedia('(max-width: 600px)');
+
+    document.querySelector(".copy_button").style.visibility="visible";
+    document.querySelector(".copy_button").onclick=copiarPortapapeles;
+
+    if (desk.matches) {
+        document.querySelector(".status_title").style.fontSize="15px";
+        document.querySelector(".status_title").style.textAling="center";
+        console.log("pantalla de escritorio");
+    }
+    
+    if (desk.matches &&
+        tabl.matches) {
+        document.querySelector(".status_title").style.fontSize="25px";
+        document.querySelector(".status_title").style.textAling="center";
+        console.log("pantalla de tableta");
+    }
+    
+    if (cell.matches) {
+        document.querySelector(".status_title").style.fontSize="15px";
+        document.querySelector(".status_title").style.textAling="center";
+        console.log("pantalla de celular");
+    }
+}
+function copiarPortapapeles() {
+    
+    
+    navigator.clipboard.writeText(cadena)
+        .then(() => {
+        alert("Texto copiado al portapapeles!")
+        console.log("Text copied to clipboard...")
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
+     
+    
 }
 
 
